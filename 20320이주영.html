@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이주영의 자기소개 블로그</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header {
+            background-color: #2196F3;
+            color: white;
+            padding: 2rem 1rem 3rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .name-box {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h2 {
+            color: #2196F3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .toggle-button {
+            position: fixed;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            z-index: 999;
+        }
+
+        .toggle-button:hover {
+            background-color: #1976D2;
+        }
+
+        /* 다크 모드 스타일 */
+        .dark-mode {
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        .dark-mode section {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            box-shadow: 0 2px 5px rgba(255,255,255,0.05);
+        }
+
+        .dark-mode header {
+            background-color: #333;
+        }
+
+        .dark-mode h2 {
+            color: #80cbc4;
+        }
+
+        .dark-mode footer {
+            color: #aaa;
+        }
+
+        .dark-mode .toggle-button {
+            background-color: #666;
+        }
+
+
+        @font-face {
+            font-family: 'GongGothicMedium';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .title{font-family:GongGothicMedium;}
+        .top-nav {
+    background-color: #e3f2fd;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #2196F3;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.nav-list li a:hover {
+    color: #1565C0;
+}
+.top-nav {
+    background-color: #e3f2fd;
+    border-bottom: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+}
+
+/* 라이트 모드 nav 리스트 */
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #2196F3;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.nav-list li a:hover {
+    color: #1565C0;
+}
+
+/* ✅ 다크 모드 nav 스타일 명확히 적용 */
+.dark-mode .top-nav {
+    background-color: #1e1e1e;   /* 완전 어두운 배경 */
+    border-bottom: 1px solid #444;
+}
+
+.dark-mode .nav-list li a {
+    color: #80cbc4;              /* 밝은 민트/청록 계열 */
+}
+
+.dark-mode .nav-list li a:hover {
+    color: #4dd0e1;              /* 호버 시 조금 더 밝은 색 */
+}
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- 다크 모드 버튼 -->
+    <button class="toggle-button" onclick="toggleMode()">🌙 다크 모드</button>
+
+    <!-- 헤더 -->
+    <header>
+        <h1 class="title">안녕하세요! 반갑습니다 😊</h1>
+        <p>이곳은 저를 소개하는 작은 블로그입니다</p>
+        <div class="name-box">이름: 이주영</div> <!-- 이름 공간 -->
+        <div class="marquee-container">
+    </div>
+    </header>
+
+    <!-- 본문 -->
+    <main>
+        <nav class="top-nav">
+            <ul class="nav-list">
+                <li><a href="#dream">나의 꿈</a></li>
+                <li><a href="#goal">나의 목표</a></li>
+                <li><a href="#hobby">나의 취미</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h2 class="title" id="dream">나의 꿈</h2>
+            <p>
+                4차 산업혁명과 함께 전자전기공학은 단순한 기술을 넘어 인공지능, 반도체, 에너지, 자율주행, 통신 인프라 등 모든 미래 산업의 기반이 되고 있습니다.
+전력을 안정적으로 공급하고, 데이터를 빠르게 전달하며, 스마트한 기기를 움직이게 하는 모든 기술 뒤에는 전자전기공학이 존재합니다.
+
+저는 이 거대한 흐름 속에서, 단순한 기술자가 아닌 <strong>"문제를 해결하고 세상을 연결하는 엔지니어"</strong>로 성장하고 싶습니다.
+기술은 도구일 뿐, 그 목적은 사람들의 삶을 개선하는 데 있다고 믿습니다.
+
+전 세계가 지속 가능성, 에너지 전환, 초연결 사회를 향해 달려가는 지금, 전자전기공학자는 인류가 직면한 위기를 해결할 핵심적인 역할을 맡고 있다고 생각합니다.
+그 일원이 되어, 단순한 발전을 넘어 공공의 가치에 기여하는 기술을 구현하고 싶은 것이 제 꿈입니다.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="title" id="goal"> 나의 목표</h2>
+            <p>
+                첫 번째 목표는 기술의 본질을 깊이 있게 이해하는 것입니다.
+기초적인 회로 이론부터 고급 신호 처리, 전력전자, 통신 시스템, 반도체 소자에 이르기까지, 전자전기의 핵심 개념들을 체계적으로 익히고 싶습니다.
+이를 통해 기술의 작동 원리뿐만 아니라, 그것이 현실에 어떤 영향을 미치는지도 함께 배우고자 합니다.
+
+두 번째 목표는 실제 문제를 해결하는 역량을 갖추는 것입니다.
+단순히 이론에 머무르지 않고, 프로젝트, 인턴십, 캡스톤 디자인, 자율 연구 등 실무 중심의 경험을 쌓아 나가려 합니다.
+특히 사회적 가치가 있는 문제—에너지 효율, 친환경 기술, 지역 사회 편의 향상 등—를 기술적으로 해결하는 데 기여하고 싶습니다.
+
+세 번째 목표는 지속적인 성장과 공유입니다.
+빠르게 변화하는 기술 환경 속에서 배움을 멈추지 않고, 제가 쌓은 지식과 경험을 동료, 후배, 더 나아가 사회와 나누는 엔지니어가 되고 싶습니다.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="title" id="hobby">나의 취미</h2>
+            <p>
+저의 취미는 음악 감상입니다.
+하루를 시작할 때나 잠들기 전까지 음악을 듣는 시간을 소중하게 생각합니다.
+특정한 장르에 국한되지 않고 다양한 음악을 즐겨 듣는 편입니다.
+
+기분에 따라 음악을 고르고, 나만의 플레이리스트를 만드는 것을 좋아합니다.
+감정이 복잡할 때는 음악이 마음을 안정시켜 주는 힘이 있다고 느낍니다.
+
+혼자 있는 시간에 이어폰을 끼고 음악에 집중하면, 세상의 소음에서 벗어난 느낌을 받습니다.
+저에게 음악 감상은 단순한 취미를 넘어 일상 속의 작은 쉼표입니다.
+            </p>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+        ⓒ 2025 나의 자기소개 블로그
+    </footer>
+
+    <!-- 자바스크립트 -->
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            const btn = document.querySelector('.toggle-button');
+
+            body.classList.toggle('dark-mode');
+
+            if (body.classList.contains('dark-mode')) {
+                btn.textContent = '☀️ 라이트 모드';
+            } else {
+                btn.textContent = '🌙 다크 모드';
+            }
+        }
+    </script>
+
+</body>
+</html>
